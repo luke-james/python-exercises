@@ -60,5 +60,3 @@ if __name__ == "__main__":
         message = oe.calculate()
 
         print(message)
-
-    exit(0)
