@@ -1,9 +1,6 @@
 import pytest
-import pytest_mock
-
 import sys
-sys.path.insert(1, '..')
-
+sys.path.append('../src')
 from src.ex1_character_input import Person, AgeError, InputParser
 
 
