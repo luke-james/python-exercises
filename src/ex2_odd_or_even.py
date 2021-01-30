@@ -1,15 +1,15 @@
 class OddsOrEvens:
 
-    '''
-    This class will calculate the response message for the input given.
-    '''
+    """
+    This class will calculate the response return_message for the input given.
+    """
 
-    def __init__(self, numbers=None):
+    def __init__(self, numbers_given=None):
 
-        if numbers is None:
-            numbers = []
+        if numbers_given is None:
+            numbers_given = []
 
-        self.numbers = numbers
+        self.numbers = numbers_given
         self.odd_message = "The number is odd!"
         self.even_message = "The number is even!"
 
@@ -29,21 +29,21 @@ class OddsOrEvens:
 
         # This function will work out whether the number to check is odd.
 
-        message = self.even_message if num % 2 == 0 else self.odd_message
-        return self.__is_number_multiple_of_4(num, message)
+        return_message = self.even_message if num % 2 == 0 else self.odd_message
+        return self.__is_number_multiple_of_4(num, return_message)
 
     @staticmethod
-    def __is_number_multiple_of_4(num, message):
+    def __is_number_multiple_of_4(num, return_message):
 
         # This function will calculate whether or not the number to check is a multiple of 4.
 
-        return message if not num % 4 == 0 else "The number is a multiple of 4!"
+        return return_message if not num % 4 == 0 else "The number is a multiple of 4!"
 
     def __divides_whole(self, num1, num2):
 
         # This function will calculate whether or not the number to check divides wholly into into the number provided.
 
-        return "The numbers divide exactly!" if num1 % num2 == 0 else self.__is_number_odd(num1)
+        return "The numbers_given divide exactly!" if num1 % num2 == 0 else self.__is_number_odd(num1)
 
 
 if __name__ == "__main__":
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     while True:
 
-        raw = input("Please enter some numbers (e.g. 4 or 4 16):")
+        raw = input("Please enter some numbers_given (e.g. 4 or 4 16):")
 
         numbers = [int(x) for x in raw.split()]
 
