@@ -45,6 +45,18 @@ class TestOddOrEven:
     def test_does_number_divide_exactly_yes(self):
 
         # Arrange
+        numbers = [2, 8]
+        oe = OddsOrEvens(numbers)
+
+        # Act
+        message = oe.calculate()
+
+        # Assert
+        assert message == f'The numbers divide exactly!'
+
+    def test_does_number_divide_exactly_yes(self):
+
+        # Arrange
         numbers = [8, 2]
         oe = OddsOrEvens(numbers)
 
@@ -52,4 +64,5 @@ class TestOddOrEven:
         message = oe.calculate()
 
         # Assert
-        assert message == f'The numbers divide to make { int(8/2) }'
+        assert message == f'The number is even!'
+
